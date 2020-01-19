@@ -97,6 +97,7 @@ public class Basic9Streams {
                 .stream()
                 .map(Person::getName)
                 .collect(Collectors.joining(" – "));
+        System.out.println("Hello world!");
 
     }
 }
