@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class BookStoreInitializer {
+class BookStoreInitializer {
     List<Book> initBookStore() {
         List<Book> books = new ArrayList<>();
         String booksFilePathFromResources = getClass().getClassLoader().getResource("books.txt").getFile();

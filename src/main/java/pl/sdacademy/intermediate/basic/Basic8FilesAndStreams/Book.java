@@ -6,7 +6,7 @@ import lombok.ToString;
 @Builder
 @ToString
 @Getter
-public class Book {
+class Book {
 
 
     private String title;

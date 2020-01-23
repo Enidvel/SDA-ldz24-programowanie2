@@ -5,7 +5,7 @@ import lombok.ToString;
 
 @Builder
 @ToString
-public class BookShortInfo {
+class BookShortInfo {
 
 
     private String title;

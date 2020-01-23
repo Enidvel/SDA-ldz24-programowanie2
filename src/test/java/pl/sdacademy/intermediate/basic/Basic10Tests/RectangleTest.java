@@ -4,25 +4,25 @@ import org.junit.*;
 
 public class RectangleTest {
 
-    Rectangle rectangle; // to jest właśnie niezainicjalizowane pole
+    private Rectangle rectangle; // to jest właśnie niezainicjalizowane pole
 
     @BeforeClass
-    public static void startOfTests() {
+    public static void setUpClass() {
         System.out.println("Starting RectangleTest");
     }
 
     @AfterClass
-    public static void EndOfTests() {
-        System.out.println("Ending RectangleTest");
+    public static void tearDownClass() {
+        System.out.println("Finishing RectangleTest");
     }
 
     @Before
-    public void setRectangleTo3And4() {
+    public void setUp() { // tutaj ustawiamy warunki do testów
         rectangle = new Rectangle(3, 4);
     }
 
     @After
-    public void testAfter() {
+    public void tearDown() {
         System.out.println("After single test case");
     }
 
@@ -36,7 +36,7 @@ public class RectangleTest {
         Assert.assertEquals(14, rectangle.calculatePerimeter());
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = IllegalArgumentException.class) // WAŻNE expected przy sprawdzaniu rzucania wyjątków!
     public void testThrowExceptionInIncorrectValuesInConstructor() {
         new Rectangle(0, -1);
     }

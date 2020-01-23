@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Getter
-public class BookStore {
+class BookStore {
     private List<Book> books;
 
     BookStore() {
